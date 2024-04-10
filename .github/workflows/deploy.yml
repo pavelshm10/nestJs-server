@@ -29,4 +29,4 @@ jobs:
           script: |
             cd /path/to/your/application
             git pull origin main
-            pm2 restart <your-app-name>
+            pm2 restart nestJs-server
