@@ -27,6 +27,6 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           port: ${{ secrets.EC2_PORT }}
           script: |
-            cd /etc/opt
+            cd /NESTJS-SERVER
             git pull origin main
             pm2 restart NESTJS-SERVER
