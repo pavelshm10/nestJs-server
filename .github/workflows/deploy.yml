@@ -28,6 +28,6 @@ jobs:
           port: ${{ secrets.EC2_PORT }}
           script: |
             cd /etc/opt
-            git pull origin main
+            git clone origin main
             pm2 start app.js
             pm2 list
