@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 // Define routes
 app.get('/api/data', (req, res) => {
     // Handle the request, e.g., fetch data from a database
-    console.log("test234")
+    console.log("test2345")
     res.json({ message: 'Data from the server' });
 });
   
