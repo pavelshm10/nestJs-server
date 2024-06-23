@@ -7,7 +7,6 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use(bodyParser.urlencoded({extended: false}))
 
-// Define routes
 app.get('/api/data', (req, res) => {
     res.json({ message: 'Data from the server' });
 });
