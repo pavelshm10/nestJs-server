@@ -29,6 +29,6 @@ jobs:
           script: |
             set -x  # Enable debugging output
             cd /etc/opt
-            git clone https://github.com/pavelshm10/nestJs-server.git
+            sudo git clone https://github.com/pavelshm10/nestJs-server.git
             pm2 start app.js
             pm2 list
