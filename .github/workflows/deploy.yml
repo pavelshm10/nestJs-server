@@ -28,7 +28,7 @@ jobs:
           port: ${{ secrets.EC2_PORT }}
           script: |
             cd /etc/opt
-            sudo chown -R $(whoami):$(whoami``) /etc/opt/nestJs-server
+            sudo chown -R $(whoami):$(whoami) /etc/opt/nestJs-server
             sudo git clone git@github.com:pavelshm10/nestJs-server.git 
             pm2 start app.js
             pm2 list
