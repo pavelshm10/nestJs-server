@@ -28,6 +28,9 @@ jobs:
           port: ${{ secrets.EC2_PORT }}
           script: |
             cd /etc/opt
+            sudo mkdir -p nestJs-server  # Create directory if it doesn't exist
+            sudo chown -R ${{ secrets.EC2_USERNAME }} nestJs-server  # Change ownership to the user
+            cd nestJs-server
             git clone git@github.com:pavelshm10/nestJs-server.git 
             pm2 start app.js
             pm2 list
