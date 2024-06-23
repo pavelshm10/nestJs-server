@@ -13,8 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
+      # - name: Install dependencies
+      #   run: npm install
 
       #- name: Build application
       #  run: npm run build
@@ -27,8 +27,7 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           port: ${{ secrets.EC2_PORT }}
           script: |
-            set -x  # Enable debugging output
             cd /etc/opt
-            sudo git clone git@github.com:pavelshm10/nestJs-server.git
+            git clone git@github.com:pavelshm10/nestJs-server.git 
             pm2 start app.js
             pm2 list
