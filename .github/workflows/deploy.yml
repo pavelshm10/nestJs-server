@@ -27,6 +27,7 @@ jobs:
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           port: ${{ secrets.EC2_PORT }}
           script: |
+            set -x  # Enable debugging output
             cd /etc/opt
             git clone https://github.com/pavelshm10/nestJs-server.git
             pm2 start app.js
