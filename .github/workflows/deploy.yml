@@ -31,5 +31,6 @@ jobs:
             sudo chmod u+w /etc/opt
             cd /etc/opt
             git clone git@github.com:pavelshm10/nestJs-server.git 
+            cd nestJs-server
             pm2 start app.js
             pm2 list
