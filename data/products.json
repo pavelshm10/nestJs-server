@@ -1,0 +1,89 @@
+[
+    {
+        "id":1,
+        "name":"TV",
+        "description": "wash the hair",
+        "price": 14.99,
+        "creation_date": "15/4/23",
+        "image": "assets/images/tv.jpg"
+    },
+    {
+        "id":2,
+        "name":"Refrigerator",
+        "description": "wash hands",
+        "price": 10.99,
+        "creation_date": "5/10/22",
+        "image": "assets/images/refrigerator.jpeg"       
+    },
+    {
+        "id":3,
+        "name":"Toaster",
+        "description": "eat something small",
+        "price": 9.99,
+        "creation_date": "15/4/23",
+        "image": "assets/images/toaster.jpeg"              
+    },
+    {
+        "id":4,
+        "name":"Laptop",
+        "description": "eat something sweet",
+        "price": 12.99,
+        "creation_date": "23/1/19",
+        "image": "assets/images/laptop.jpeg"                    
+    },
+    {
+        "id":5,
+        "name":"Oven",
+        "description": "wash the hair",
+        "price": 11.99,
+        "creation_date": "15/4/23",
+        "image": "assets/images/oven.jpeg"                     
+    },
+    {
+        "id":6,
+        "name":"Oven",
+        "description": "wash the hair",
+        "price": 11.99,
+        "creation_date": "15/4/23",
+        "image": "assets/images/oven.jpeg"                     
+    },
+    {
+        "id":7,
+        "name":"Oven",
+        "description": "wash the hair",
+        "price": 11.99,
+        "creation_date": "15/4/23",
+        "image": "assets/images/oven.jpeg"                     
+    },
+    {
+        "id":8,
+        "name":"Oven",
+        "description": "wash the hair",
+        "price": 11.99,
+        "creation_date": "15/4/23",
+        "image": "assets/images/oven.jpeg"                     
+    },
+    {
+        "id":9,
+        "name":"Oven",
+        "description": "wash the hair",
+        "price": 11.99,
+        "creation_date": "15/4/23",
+        "image": "assets/images/oven.jpeg"                     
+    },
+    {
+        "id":10,
+        "name":"Oven",
+        "description": "wash the hair",
+        "price": 11.99,
+        "creation_date": "15/4/23",
+        "image": "assets/images/oven.jpeg"                     
+    },{
+        "id":11,
+        "name":"Oven",
+        "description": "wash the hair",
+        "price": 11.99,
+        "creation_date": "15/4/23",
+        "image": "assets/images/toaster.jpeg"                     
+    }
+]

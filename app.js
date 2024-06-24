@@ -1,19 +1,13 @@
-const express = require('express')
-const bodyParser= require('body-parser')
-const path = require('path');
+const express = require('express');
+const bodyParser = require('body-parser');
+const productRoutes = require('./routes/productRoutes');
+
 const app = express();
-app.use(express.static(path.join(__dirname, 'client/build')));
-// const users = require('./routes/users')
-console.log('hi');
+app.use(bodyParser.json());
 
-app.use(bodyParser.urlencoded({extended: false}))
+app.use('/api', productRoutes);
 
-app.get('/api/data', (req, res) => {
-    res.json({ message: 'Data from the server' });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
-  
-  // Start the server
-  app.listen(3001
-    , () => {
-    console.log('Server is running on port 3001');
-  });
