@@ -23,7 +23,7 @@ jobs:
       - name: SSH into EC2 and deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.EC2_HOST }}
+          host: ec2-23-20-42-30.compute-1.amazonaws.com
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           port: ${{ secrets.EC2_PORT }}
