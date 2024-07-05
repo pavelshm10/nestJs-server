@@ -32,5 +32,6 @@ jobs:
             rm -rf nestJs-server
             git clone git@github.com:pavelshm10/nestJs-server.git 
             cd nestJs-server
+            npm install
             pm2 start app.js
             pm2 list
