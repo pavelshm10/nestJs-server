@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const productRoutes = require('./routes/productRoutes');
 const mongoose = require('./config/dbConfig');
 const corsOptions = {
-  origin: 'http://pavelshm10.github.io/nestjs/', // Replace with your GitHub Pages URL
+  origin: 'http://pavelshm10.github.io/nestjs', // Replace with your GitHub Pages URL
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 const app = express();
