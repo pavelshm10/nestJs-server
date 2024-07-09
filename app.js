@@ -7,9 +7,13 @@ const mongoose = require('./config/dbConfig');
 //   origin: 'https://pavelshm10.github.io/nestjs/', // Replace with your GitHub Pages URL
 //   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 // };
+const corsOptions = {
+  origin: '*', // Update with specific origin for production
+  optionsSuccessStatus: 200
+};
 const app = express();
-app.use(cors());
-app.options('/api/products', cors());
+app.use(cors(corsOptions));
+// app.options('/api/products', cors(corsOptions));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
