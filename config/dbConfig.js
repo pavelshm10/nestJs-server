@@ -14,5 +14,17 @@ db.once('open', function() {
     console.log('MongoDB connected successfully123');
 });
 
+// Test a simple query
+const testConnection = async () => {
+    try {
+      const result = await db.admin().ping();
+      console.log('Ping result:', result);
+    } catch (err) {
+      console.error('Error pinging MongoDB:', err);
+    }
+  };
+  
+  testConnection();
+
 module.exports = mongoose;
 
