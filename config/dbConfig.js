@@ -1,11 +1,11 @@
 
 const mongoose = require('mongoose');
-const mongoDB = 'mongodb+srv://pavelsh00:tYw7Z7elnXO3K9jS@test.4bsjii7.mongodb.net/?retryWrites=true&w=majority&appName=Test';
+const mongoDB = 'mongodb+srv://pavelsh00:tYw7Z7elnXO3K9jS@test123.4bsjii7.mongodb.net/?retryWrites=true&w=majority&appName=Test';
 
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true,
-    serverSelectionTimeoutMS: 30000, // 30 seconds
-    socketTimeoutMS: 45000, // 45 seconds
-    family: 4 // Use IPv4, skip trying IPv6
+    serverSelectionTimeoutMS: 10000, // 30 seconds
+    // socketTimeoutMS: 45000, // 45 seconds
+    // family: 4 // Use IPv4, skip trying IPv6
 });
 
 const db = mongoose.connection;
@@ -15,16 +15,16 @@ db.once('open', function() {
 });
 
 // Test a simple query
-const testConnection = async () => {
-    try {
-      const result = await db.admin().ping();
-      console.log('Ping result:', result);
-    } catch (err) {
-      console.error('Error pinging MongoDB:', err);
-    }
-  };
+// const testConnection = async () => {
+//     try {
+//       const result = await db.admin().ping();
+//       console.log('Ping result:', result);
+//     } catch (err) {
+//       console.error('Error pinging MongoDB:', err);
+//     }
+//   };
   
-  testConnection();
+//   testConnection();
 
 module.exports = mongoose;
 
