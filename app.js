@@ -5,17 +5,17 @@ const productRoutes = require("./routes/productRoutes");
 const https = require("https");
 const fs = require('fs');
 const mongoose = require("./config/dbConfig");
-const corsOptions = {
-  origin: "https://pavelshm10github.io/nestjs/",
-  optionsSuccessStatus: 200,
-};
+
 // const corsOptions = {
 //   origin: '*', // Update with specific origin for production
 //   optionsSuccessStatus: 200
 // };
 const app = express();
-app.use(cors(corsOptions));
-// app.options('/api/products', cors(corsOptions));
+app.use(cors({
+  origin: '*', // Allow all origins
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow these HTTP methods
+  credentials: true // Allow credentials (optional, if needed)
+}));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
