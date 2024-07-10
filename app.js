@@ -6,8 +6,8 @@ const https = require("https");
 const fs = require('fs');
 const mongoose = require("./config/dbConfig");
 const corsOptions = {
-  origin: "https://pavelshm10.github.io/nestjs/", // Replace with your GitHub Pages URL
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  origin: "https://pavelshm10github.io/nestjs/",
+  optionsSuccessStatus: 200,
 };
 // const corsOptions = {
 //   origin: '*', // Update with specific origin for production
