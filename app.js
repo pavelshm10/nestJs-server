@@ -8,9 +8,9 @@ const mongoose = require("./config/dbConfig");
 
 const app = express();
 app.use(cors({
-  origin: 'https://23.20.42.30:3000', // Allow all origins
+  origin: '*', // Allow all origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow these HTTP methods
-  credentials: true // Allow credentials (optional, if needed)
+  // credentials: true // Allow credentials (optional, if needed)
 }));
 
 app.use(express.json());
