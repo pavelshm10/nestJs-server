@@ -10,10 +10,9 @@ const app = express();
 app.use(cors({
   origin: '*', // Allow all origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow these HTTP methods
-  // credentials: true // Allow credentials (optional, if needed)
 }));
 
-app.use(express.json());
+// app.use(express.json());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
