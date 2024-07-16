@@ -6,13 +6,9 @@ const https = require("https");
 const fs = require('fs');
 const mongoose = require("./config/dbConfig");
 
-// const corsOptions = {
-//   origin: '*', // Update with specific origin for production
-//   optionsSuccessStatus: 200
-// };
 const app = express();
 app.use(cors({
-  origin: '*', // Allow all origins
+  origin: 'https://23.20.42.30:3000', // Allow all origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow these HTTP methods
   credentials: true // Allow credentials (optional, if needed)
 }));
