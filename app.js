@@ -22,7 +22,7 @@ app.use("/api", productRoutes);
 
 const options = {
   key: fs.readFileSync("server.key"),
-  cert: fs.readFileSync("server.crt"),
+  cert: fs.readFileSync("server.cert"),
 };
 
 https.createServer(options, app).listen(3000, () => {
