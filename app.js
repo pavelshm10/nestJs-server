@@ -5,7 +5,9 @@ const productRoutes = require("./routes/productRoutes");
 const https = require("https");
 const fs = require('fs');
 const mongoose = require("./config/dbConfig");
-
+const agent = new https.Agent({
+  rejectUnauthorized: false, // Ignore SSL certificate errors
+});
 const app = express();
 app.use(cors({
   origin: '*', // Allow all origins
