@@ -9,7 +9,7 @@ const mongoose = require("./config/dbConfig");
 const app = express();
 app.use(cors({
   origin: '*', // Allow all origins
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow these HTTP methods
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', 
 }));
 
 // app.use(express.json());
