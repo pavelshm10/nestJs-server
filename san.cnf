@@ -12,6 +12,6 @@ extendedKeyUsage = serverAuth
 subjectAltName = @alt_names
 
 [alt_names]
-DNS.1 = main.d3rbcp5dx3dvou.amplifyapp.com
-DNS.2 = www.main.d3rbcp5dx3dvou.amplifyapp.com
+DNS.1 = ec2-23-20-42-30.compute-1.amazonaws.com
+DNS.2 = www.ec2-23-20-42-30.compute-1.amazonaws.com
 DNS.3 = localhost
