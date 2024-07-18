@@ -10,7 +10,7 @@ const agent = new https.Agent({
 });
 const app = express();
 app.use(cors({
-  origin: '*', // Allow all origins
+  origin: 'https://main.d3rbcp5dx3dvou.amplifyapp.com/', // Allow all origins
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 }));
 
