@@ -11,7 +11,8 @@ const agent = new https.Agent({
 const app = express();
 app.use(cors({
   origin: 'https://main.d3rbcp5dx3dvou.amplifyapp.com/', // Allow all origins
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  optionsSuccessStatus: 200,
+  // methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 }));
 
 // app.use(express.json());
@@ -21,6 +22,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api", productRoutes);
 
 const options = {
+  // key: fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/privkey.pem'),
+  // cert: fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/fullchain.pem'),
   key: fs.readFileSync("server.key"),
   cert: fs.readFileSync("server.cert"),
 };
