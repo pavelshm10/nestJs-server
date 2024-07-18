@@ -12,6 +12,7 @@ const app = express();
 app.use(cors({
   origin: 'https://main.d3rbcp5dx3dvou.amplifyapp.com/', // Allow all origins
   optionsSuccessStatus: 200,
+  rejectUnauthorized: false
   // methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 }));
 
