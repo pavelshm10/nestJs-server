@@ -29,6 +29,14 @@ const options = {
   cert: fs.readFileSync("server.cert"),
 };
 
-https.createServer(options, app).listen(3000, () => {
-  console.log("HTTPS Server running on port 3000");
+const server = https.createServer(options, app);
+
+const PORT = process.env.PORT || 443;
+
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
+
+// https.createServer(options, app).listen(3000, () => {
+//   console.log("HTTPS Server running on port 3000");
+// });
