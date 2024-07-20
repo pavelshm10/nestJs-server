@@ -13,8 +13,7 @@ const app = express();
 const corsOptions = {
   origin: '*',
   methods: ['GET', 'POST'],
-  credentials: true,
-  // allowedHeaders: ['Content-Type'],
+  allowedHeaders: ['Content-Type'],
   // optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
@@ -27,11 +26,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api", productRoutes);
 
-const options = {
-  key: fs.readFileSync("domain.key"),
-  cert: fs.readFileSync("domain.crt"),
+// Load your self-signed SSL certificates
+const privateKey = fs.readFileSync('private.key', 'utf8');
+const certificate = fs.readFileSync('private.crt', 'utf8');
+
+const credentials = {
+  key: privateKey,
+  cert: certificate
 };
 
-https.createServer(options, app).listen(3000, () => {
+https.createServer(credentials, app).listen(3000, () => {
   console.log('Server running on https://localhost:3000/');
 });
