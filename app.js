@@ -13,6 +13,7 @@ const app = express();
 const corsOptions = {
   origin: '*',
   methods: ['GET', 'POST'],
+  // credentials: true,
   allowedHeaders: ['Content-Type'],
   // optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
@@ -27,8 +28,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api", productRoutes);
 
 // Load your self-signed SSL certificates
-const privateKey = fs.readFileSync('private.key', 'utf8');
-const certificate = fs.readFileSync('private.crt', 'utf8');
+const privateKey = fs.readFileSync('mydomain.key');
+const certificate = fs.readFileSync('mydomain.crt');
 
 const credentials = {
   key: privateKey,
